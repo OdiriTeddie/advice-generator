@@ -1,0 +1,132 @@
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--light-cyan);
+    line-height: 1.4;
+    height: 100vh;
+    font-size: 1rem;
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    gap: 15rem;
+}
+
+.container {
+    max-width: 60rem;
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.advice-box {
+    background-color: var(--dark-grayish-blue);
+    padding-inline: 2rem;
+    padding-block: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    position: relative;
+
+    width: 100%;
+}
+
+.advice-number {
+    color: var(--neon-green);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.advice-button {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--neon-green);
+
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 1.95rem);
+    transform: translateY(50%);
+
+    cursor: pointer
+}
+
+.advice-button:hover {
+    box-shadow:
+    0 0 10px 0.1px var(--neon-green),
+    0 0 30px 0.5px var(--neon-green),
+    0 0 40px 1px var(--dark-grayish-blue);
+
+}
+
+.divider {
+    background-image: url("./images/pattern-divider-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.advice-wrapper {
+    min-height: 150px;
+}
+
+.advice-wrapper img {
+    width: 5rem;
+}
+
+.attribution{
+    font-size: 0.75rem;
+    /* margin-top: auto; */
+}
+
+.attribution a:last-child {
+    color: #fff;
+}
+
+@media(min-width: 50em) {
+
+    body {
+        gap: 10rem;
+    }
+    .advice-box {
+        width: 550px;
+        
+    }
+
+    .divider {
+        background-image: url("./images/pattern-divider-desktop.svg");
+    }
+}
